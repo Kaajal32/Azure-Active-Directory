@@ -3,6 +3,8 @@ SIEM (Security Information and Event Management System) is a tool security profe
 
 <h2>Part 1: Setting Up Lab Resources</h2>
 1. Created a new Account in Azure. Azure Subscription 1 with $200 credits was provided for free. For this project, a resource group with the name:labgroup was created.
+<img src = "images/1.png" height = 200, width = 300>
+
 <h2>Part 2: Getting Data into Sentinel </h2>
 <h2>Part 3: Generating Security Events </h2>
 <h2>Part 4: Creating Scheduled Task and Writing Analytic Rule </h2>
