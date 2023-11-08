@@ -13,7 +13,15 @@ SIEM (Security Information and Event Management System) is a tool security profe
 <h2>Part 2: Getting Data into Sentinel </h2>
 1. After Sentinel deployment, if we go to Incident tab we do not see any incidents being recorded. In order to bring data to Sentinel from VM, we have to create Data Collection Rule in Sentinel. For this purpose, we use <B>Data Collectors</B>. In the Incident menu search bar of Microsoft Sentinel, I typed <I>Windows Security Events via AMA</I> which opened the window for connector page.<img src = "images/7.1.png" height = 500, width = 600>
 2. Then we opened the connector page, and started creating data connection rule using our Resource:labgroup. We named our rule: cloudvmdemo. Selected `All Security Events` and then finally created data collection rule. <img src = "images/7.2.png" height = 500, width = 600><img src = "images/7.3.png" height = 500, width = 600><img src = "images/7.4.png" height = 500, width = 600><img src = "images/7.5.png" height = 500, width = 600>
+
 <h2>Part 3: Generating Security Events </h2>
+1. Now our VM is connected to Microsoft Sentinel and Log Analytics Space. We can transport data from our logs. Here I downloaded the RDP file from a virtual machine and connected it to Windows 10 Pro using Microsoft Remote Desktop in MacBook Air. I changed the settings of time and date inside Windows 10 Pro. For  <img src = "images/8.1.png" height = 500, width = 600>  <img src = "images/8.2.png" height = 500, width = 600>
+2. Windows keep a record of several types of security events which covers potential scenarios such as privileged use, Logon events, processes, policy changes, and much more. So, to see the security events, we nagivate to `Event Viewer`, there we see several options like Application logs, Security Logs, Setup, System, and Forwarded Events. Here, I selected Security and looked for `4624` which is a is indicative of a successful logon. <img src = "images/8.2.png" height = 500, width = 600> 
+3. After this, I navigated to Microsoft Sentinel in Azure portal and in Logs section ran KQL import logs on Sentinel. Here is the KQL that I ran: 
+<B>SecurityEvent
+| where EventID == 4624
+| project TimeGenerated, Computer, AccountName </B>
+<img src = "images/8.3.png" height = 500, width = 600> 
 <h2>Part 4: Creating Scheduled Task and Writing Analytic Rule </h2>
 <h2>Part 5:  MITRE ATT&CK: </h2>
 <h2> Learned Concepts: </h2>
