@@ -47,7 +47,11 @@ Then, set the query rule where I specified the time the query should run.<img sr
 After that in Event grouping section, I selected: Trigger an alert for each event, so that each trigger can be logged. <img src = "images/9.11.png" height = 500, width = 600>
 Finally, the query rule was created.
 
-
 <h2>Part 4.3: Creating Second Schedule Task to Log on Sentinel as Incident</h2>
+1. Finally, we are creating another Scheduled Task named <B>task2</B> by following the same process as mentioned in <B>Part:4.1</B>
+<img src = "images/10.1.png" height = 500, width = 600> <img src = "images/10.2.png" height = 500, width = 600><img src = "images/10.3.png" height = 500, width = 600>
+2. Then, I navigated to Microsoft Sentinel, and then in the Incident tab <B>task2</B> was logged on which can be used to investigate further.
+<img src = "images/10.4.png" height = 500, width = 600>
+
 <h2>Part 5: MITRE ATT&CK: </h2>
 <h2> Learned Concepts: </h2>
