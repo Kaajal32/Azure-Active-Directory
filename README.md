@@ -41,10 +41,10 @@ In this part of the project we are learning to create a schedule task. In Window
 Now, we are creating a query rule in Microsoft Sentinel so we do not have to run query everytime the event occurs. With this rule, the query gets logged into Sentinel by itself. We do not have to run the KQL evertime. 
 1. For this, we click create and select schedule query rule.<img src = "images/9.7.png" height = 500, width = 600> 
 2. After this, we name the rule: Scheduled Task and Select two Tactics and Techniques: Persistence then Scheduled Task/Job.<img src = "images/9.8.png" height = 500, width = 600> 
-3. In set rule logic section, we copy and paste above KQL. <img src = "images/9.8.1png" height = 500, width = 600> 
-4. Then in Alert Enhancement we set Entity mapping. Enriching an alert simply is the process of adding context to the alert to make it easier for the analyst to investigate. I set Entity mapping in following way. <img src = "images/9.9png" height = 500, width = 600> <br>
+3. In set rule logic section, we copy and paste above KQL. <img src = "images/9.8.1.png" height = 500, width = 600> 
+4. Then in Alert Enhancement we set Entity mapping. Enriching an alert simply is the process of adding context to the alert to make it easier for the analyst to investigate. I set Entity mapping in following way. <img src = "images/9.9.png" height = 500, width = 600> <br>
 Then, set the query rule where I specified the time the query should run.<img src = "images/9.10.png" height = 500, width = 600> <br>
-After that in Event grouping section, I selected: Trigger an alert for each event, so that each trigger can be logged. <img src = "images/9.11.png" height = 500, width = 600> <br>
+After that in Event grouping section, I selected: Trigger an alert for each event, so that each trigger can be logged. <img src = "images/9.11.png" height = 500, width = 600>
 Finally, the query rule was created.
 
 
