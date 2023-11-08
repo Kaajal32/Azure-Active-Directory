@@ -54,7 +54,7 @@ Finally, the query rule was created.
 <img src = "images/10.4.png" height = 500, width = 600>
 
 <h2>Part 5: MITRE ATT&CK: </h2>
-Here, the MITRE ATT&CK frame was further used to dig further into the Persistence Technique. The observed MITRE ATT&CK tactic used in this lab is <B>TA0003 Persistence<B/> which essentially allows a malicious actor to maintain a foothold in an environment. The framework further suggested other Detection processes for this technique.
+Here, the MITRE ATT&CK frame was further used to dig further into the Persistence Technique. The observed MITRE ATT&CK tactic used in this lab is <B>TA0003 Persistence</B> which essentially allows a malicious actor to maintain a foothold in an environment. The framework further suggested other Detection processes for this technique.
 
  <h2>References</h2>
  This lab was refernced from: https://cyberwoxacademy.com/azure-cloud-detection-lab-project/ and the corresponding Youtube channel:<B>Cyberwox</B>
