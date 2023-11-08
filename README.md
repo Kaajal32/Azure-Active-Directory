@@ -24,6 +24,11 @@ SIEM (Security Information and Event Management System) is a tool security profe
 <img src = "images/8.4.png" height = 500, width = 600> 
 
 <h2>Part 4.1: Creating First Scheduled Task</h2>
+In this part of the project we are learning to create a schedule task. In Windows Task Scheduler you have the option to create a scheduled task. A scheduled task is essentially a way to automate certain activities on your machine. For instance, you could set up a scheduled task that opens Google Chrome at a certain time every day. In most cases, scheduled tasks are harmless however, they can be used as a <B> Persistence Technique </B> by malicious actors.
+1. Here, we are creating a Scheduled task: malicioustask. <B>malicioustask</B>is the Windows Security Event ID that corresponds to scheduled task creation is 4698. However, these events are not logged by default in the Windows event viewer. To enable logging for this event we need to make some changes to the Windows Security policy in our VM. So, we navigate to Local Security Policy and expand Advanced Audit Policy Configuration. Then, I expanded System Audit Policies and Select Object Access. Then select the Audit Other Object Access and enable Success and Failure. <img src = "images/9.1.png" height = 500, width = 600> 
+2. After this, I navigated to Task Scheduler in Windows 10 Pro then start creating a task. Here I am creating a task that would open Internet Explorer at a certain time. In General section, I named the task as <B>malicioustask</B> and configured for Windows 10. In Trigger section, I chose certain date and time for the task to trigger. In Actions section: I choose Internet Explorer file to run. <img src = "images/9.2.png" height = 500, width = 600> <img src = "images/9.3.png" height = 500, width = 600> <img src = "images/9.4.png" height = 500, width = 600> 
+
+
 <h2>Part 4.2: Writing Analytic Rule </h2>
 <h2>Part 4.3: Creating Second Schedule Task to Log on Sentinel as Incident</h2>
 <h2>Part 5: MITRE ATT&CK: </h2>
