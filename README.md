@@ -22,6 +22,9 @@ SIEM (Security Information and Event Management System) is a tool security profe
 | where EventID == 4624
 | project TimeGenerated, Computer, AccountName </B>
 <img src = "images/8.4.png" height = 500, width = 600> 
-<h2>Part 4: Creating Scheduled Task and Writing Analytic Rule </h2>
-<h2>Part 5:  MITRE ATT&CK: </h2>
+
+<h2>Part 4.1: Creating First Scheduled Task</h2>
+<h2>Part 4.2: Writing Analytic Rule </h2>
+<h2>Part 4.3: Creating Second Schedule Task to Log on Sentinel as Incident</h2>
+<h2>Part 5: MITRE ATT&CK: </h2>
 <h2> Learned Concepts: </h2>
