@@ -11,7 +11,7 @@ SIEM (Security Information and Event Management System) is a tool security profe
 5. After this, we created <B>LOg Analytic Workspace</B> in Microsoft Sentinel and added our Resource group: labgroupvm so that we can store and log data from Azure Resources.<img src = "images/5.png" height = 500, width = 500> <img src = "images/6.png" height = 500, width = 500>
 
 <h2>Part 2: Getting Data into Sentinel </h2>
-1. After Sentinel deployment, if we go to Incident tab we do not see any incidents being recorded. In order to bring data to Sentinel from VM, we have to create Data Collection Rule in Sentinel. For this purpose, we use <B>Data Collectors</B>. 
+1. After Sentinel deployment, if we go to Incident tab we do not see any incidents being recorded. In order to bring data to Sentinel from VM, we have to create Data Collection Rule in Sentinel. For this purpose, we use <B>Data Collectors</B>. In the Incident menu search bar of Microsoft Sentinel, I typed <I>Windows Security Events via AMA</I> which opened the window for connector page.<img src = "images/7.1png" height = 500, width = 500>
 <h2>Part 3: Generating Security Events </h2>
 <h2>Part 4: Creating Scheduled Task and Writing Analytic Rule </h2>
 <h2>Part 5:  MITRE ATT&CK: </h2>
