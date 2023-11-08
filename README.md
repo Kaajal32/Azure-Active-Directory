@@ -28,6 +28,14 @@ In this part of the project we are learning to create a schedule task. In Window
 1. Here, we are creating a Scheduled task: malicioustask. <B>malicioustask</B>is the Windows Security Event ID that corresponds to scheduled task creation is 4698. However, these events are not logged by default in the Windows event viewer. To enable logging for this event we need to make some changes to the Windows Security policy in our VM. So, we navigate to Local Security Policy and expand Advanced Audit Policy Configuration. Then, I expanded System Audit Policies and Select Object Access. Then select the Audit Other Object Access and enable Success and Failure. <img src = "images/9.1.png" height = 500, width = 600> 
 2. After this, I navigated to Task Scheduler in Windows 10 Pro then start creating a task. Here I am creating a task that would open Internet Explorer at a certain time. In General section, I named the task as <B>malicioustask</B> and configured for Windows 10. In Trigger section, I chose certain date and time for the task to trigger. In Actions section: I choose Internet Explorer file to run. <img src = "images/9.2.png" height = 500, width = 600> <img src = "images/9.3.png" height = 500, width = 600> <img src = "images/9.4.png" height = 500, width = 600> 
 3. After successfully creating the task, I navigated Event Viewer and then to Security section where I see successful store of the task 4698. <img src = "images/9.5.png" height = 500, width = 600> 
+4. Then we navigated to Microsoft Sentinel and ran KQL: <Br>
+<B>SecurityEvent                             
+ | where EventID == 4698
+ | parse EventData with * '<Data Name="SubjectUserName">' User '</Data>' *
+| parse EventData with * '<Data Name="TaskName">' NameofSceuduledTask '</Data>' *
+ | parse EventData with * '<Data Name="ClientProcessId">' ClientProcessID '</Data>' *
+ | project Computer, TimeGenerated, ClientProcessID, NameofSceuduledTask, User</B> <Br>
+ which logged the event from Windows VM to the Microsoft Sentinel. <img src = "images/9.6.png" height = 500, width = 600> 
 
 
 <h2>Part 4.2: Writing Analytic Rule </h2>
